@@ -1,0 +1,162 @@
+
+body {
+    margin: auto;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Babits_Mihály_könyöklős_portréja_%28Székely_Aladár_felvétele%2C_1914%29.jpg/200px-Babits_Mihály_könyöklős_portréja_%28Székely_Aladár_felvétele%2C_1914%29.jpg);
+    background-repeat: repeat;
+    width: 100%;
+    background-size: 100%;
+}
+
+header {
+    margin-top: 5px;
+    background: rgb(92,47,0);
+    background: radial-gradient(circle, rgba(92,47,0,1) 22%, rgba(144,91,12,1) 73%, rgba(221,122,0,1) 100%);
+    
+}
+
+nav {
+    display: flex;
+}
+
+nav i {
+    margin-top: 6px;
+    font-size: 26px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    padding-top: 0px;
+    color: black;
+    background: rgb(171,135,81);
+    background: linear-gradient(101deg, rgba(171,135,81,1) 15%, rgba(173,95,0,1) 25%, rgba(173,95,0,1) 50%, rgba(173,95,0,1) 75%, rgba(171,135,81,1) 85%);
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+nav a:hover{
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: inset 5px 5px 15px 5px #000000; 
+    box-shadow: inset 5px 5px 15px 5px #000000;
+}
+
+input[type=text] {
+        border-radius: 10px;
+        border: 2px solid lightseagreen;
+        background: rgb(92,47,0);
+        background: radial-gradient(circle, rgba(92,47,0,0) 22%, rgba(144,91,12,0) 73%, rgba(221,122,0,0) 100%);
+        padding: 5px;
+        width: 60px;
+        text-align: center;
+        justify-content: flex-end;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300&display=swap');
+h1 {
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 93, 93);
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 12px;
+}
+
+h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 10px;
+    margin-right: 180px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin-bottom: 24px;
+    cursor: pointer;
+  }
+
+  #content {
+    display: none;
+    margin-top: 24px;
+  }
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+@media only screen and (width: 360) {
+    body {
+    margin: auto;
+    width: 100%;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Babits_Mihály_könyöklős_portréja_%28Székely_Aladár_felvétele%2C_1914%29.jpg/200px-Babits_Mihály_könyöklős_portréja_%28Székely_Aladár_felvétele%2C_1914%29.jpg);
+}
+
+
+
+    
+header {
+    margin-top: 0px;
+    background: rgb(92,47,0);
+    background: radial-gradient(circle, rgba(92,47,0,1) 22%, rgba(144,91,12,1) 73%, rgba(221,122,0,1) 100%);
+    
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    padding-top: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: black;
+    font-size: 25px;
+    background: rgb(171,135,81);
+    background: linear-gradient(101deg, rgba(171,135,81,1) 15%, rgba(173,95,0,1) 25%, rgba(173,95,0,1) 50%, rgba(173,95,0,1) 75%, rgba(171,135,81,1) 85%);
+    border-radius: 20px;
+    border: 2px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    
+}
+
+nav a:hover{
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: inset 5px 5px 15px 5px #000000; 
+    box-shadow: inset 5px 5px 15px 5px #000000;
+}
+
+input[type=text] {
+        border-radius: 10px;
+        font-style: oblique;
+        border: 2px solid rgb(0, 0, 0);
+        background: rgb(92,47,0);
+        background: radial-gradient(circle, rgba(92,47,0,0) 22%, rgba(144,91,12,0) 73%, rgba(221,122,0,0) 100%);
+        padding-right: 100px;
+        width: 60px;
+        text-align: center;
+        justify-content: flex-end;
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+}
+    }
+}

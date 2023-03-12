@@ -1,0 +1,9 @@
+BACKGROUNDS
+HOME:    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Babits_Mihály_könyöklős_portréja_%28Székely_Aladár_felvétele%2C_1914%29.jpg/200px-Babits_Mihály_könyöklős_portréja_%28Székely_Aladár_felvétele%2C_1914%29.jpg);
+
+FAVORITE:     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Ady_Endre_álló_portréja_%28Székely_Aladár_felvétele%29.jpg/791px-Ady_Endre_álló_portréja_%28Székely_Aladár_felvétele%29.jpg);
+
+LOGIN:     background-image: url(https://ocdn.eu/pulscms-transforms/1/-TXktkpTURBXy80N2Q4MmEzNTRkMTEzZWIyZTU3YjYyNTIyMmQ3MWRiMS5qcGeRlQLNAWgAwsM);
+
+
+OWN:     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Orlai-petofi1.jpg/220px-Orlai-petofi1.jpg);
