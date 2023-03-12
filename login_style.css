@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    margin-top: 5px;
+    height: 2em;
     background: rgb(92,47,0);
     background: radial-gradient(circle, rgba(92,47,0,1) 22%, rgba(144,91,12,1) 73%, rgba(221,122,0,1) 100%);
     
@@ -17,39 +17,68 @@ nav {
 }
 
 nav i {
-    margin-top: 6px;
-    font-size: 26px;
-    padding-right: 5px;
-    padding-left: 5px;
+    margin-top: 0.44em;
+    font-size: 1.3em;
+    padding-right: 0.2em;
+    padding-left: 0.1em;
 }
 
 nav a {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
     text-decoration: none;
-    padding-top: 0px;
+    width: 5em;
+    height: 1.25em;
+    font-size: 1em;
     color: black;
     background: rgb(171,135,81);
     background: linear-gradient(101deg, rgba(171,135,81,1) 15%, rgba(173,95,0,1) 25%, rgba(173,95,0,1) 50%, rgba(173,95,0,1) 75%, rgba(171,135,81,1) 85%);
     border-radius: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 0.5em;
+    margin-right: 0.4em;
+    margin-left: 0.2em;
+    margin-top: 0.35em;
+    -webkit-box-shadow: -7px 7px 1px -2px rgba(0,0,0,0.9); 
+    box-shadow: -7px 7px 1px -2px rgba(0,0,0,0.9);
 }
 
 nav a:hover{
-    position: relative;
+    position: relative; 
     top: 5px;
     -webkit-box-shadow: inset 5px 5px 15px 5px #000000; 
-    box-shadow: inset 5px 5px 15px 5px #000000;
+    box-shadow: inset 10px 5px 15px 5px #000000;
 }
 
 input[type=text] {
-        border-radius: 10px;
-        border: 2px solid lightseagreen;
+        border-radius: 2em;
+        border: 1.5px solid lightseagreen;
         background: rgb(92,47,0);
         background: radial-gradient(circle, rgba(92,47,0,0) 22%, rgba(144,91,12,0) 73%, rgba(221,122,0,0) 100%);
-        padding: 5px;
-        width: 60px;
+        padding: 0.1em;
+        width: 8em;
+        height: 1.5em;
+        margin-top: 0.3em;
+        margin-right: 0.5em;
         text-align: center;
+        font-size: 0.8em;
         justify-content: flex-end;
+}
+input[type=text]:hover {
+    border-radius: 2em;
+    border: 1.5px solid lightseagreen;
+    background: rgb(92,47,0);
+    background: radial-gradient(circle, rgba(92,47,0,0) 22%, rgba(144,91,12,0) 73%, rgba(221,122,0,0) 100%);
+    padding: 0.1em;
+    outline: none;
+    width: 8em;
+    height: 1.5em;
+    margin-top: 0.3em;
+    margin-right: 0.5em;
+    text-align: center;
+    font-size: 0.8em;
+    justify-content: flex-end;
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------*/
@@ -84,11 +113,151 @@ button {
     cursor: pointer;
   }
 
-  #content {
-    display: none;
-    margin-top: 24px;
-  }
+  .loginGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .login { grid-area: 1 / 1 / 2 / 2; }
 
+    p {
+        text-align: center;
+        font-size: 0.7em;
+        font-family: 'Dancing Script', cursive;    
+        background: linear-gradient(101deg, rgba(0,0,0,0.5) 20%, rgba(255,255,255,0.5) 40%, rgba(0,0,0,0.5) 60%, rgba(255,255,255,0.5) 80%);
+        color: white;
+        padding-top: 1em;
+    }
+
+
+    .login input[type=text] {
+        text-align: center;
+        font: 20px solid pink;
+        width: 15em;
+        height: 1em;
+        padding: 2%;
+        margin-left: 1em;
+        margin-top: 1em;
+
+        --angle: 1deg;
+        
+        border: 0.2em solid;
+        border-image: conic-gradient(from var(--angle), rgb(252, 252, 252), rgb(236, 8, 8), rgb(255, 255, 255), rgb(0, 0, 0)) 1;
+        
+        animation: 5s rotate linear infinite;
+    }
+
+    .login input[type=text]:hover {
+        text-align: center;
+        color: rgb(1, 214, 214);
+        width: 15em;
+        height: 1em;
+        --angle: 1deg;
+        
+        border: 0.3em solid;
+        border-image: conic-gradient(from var(--angle), rgb(252, 252, 252), rgb(236, 8, 8), rgb(255, 255, 255), rgb(0, 0, 0)) 1;
+        
+        animation: 1s rotate linear infinite;
+    }
+
+
+    #loginId::placeholder {
+        color: #d50101;
+    }
+
+    #loginPw::placeholder {
+        color: #d50101;
+    }
+
+    .login input[type=password] {
+        text-align: center;
+        font: 20px solid pink;
+        background: none;
+        width: 15em;
+        height: 1em;
+        padding: 2%;
+        margin-left: 1em;
+        margin-top: 1em;
+
+        --angle: 1deg;
+        
+        border: 0.2em solid;
+        border-image: conic-gradient(from var(--angle), rgb(252, 252, 252), rgb(236, 8, 8), rgb(255, 255, 255), rgb(0, 0, 0)) 1;
+        
+        animation: 5s rotate linear infinite;
+    }
+
+    .login input[type=password]:hover {
+        text-align: center;
+        color: rgb(1, 214, 214);
+        width: 15em;
+        height: 1em;
+        
+        --angle: 1deg;
+        
+        border: 0.3em solid;
+        border-image: conic-gradient(from var(--angle), rgb(252, 252, 252), rgb(236, 8, 8), rgb(255, 255, 255), rgb(0, 0, 0)) 1 !;
+        
+        animation: 1s rotate linear infinite;
+    }
+
+
+    #loginButton {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        text-align: center; 
+        font: 1em solid pink;
+        width: 16em;
+        height: 2em;
+        padding: 2%;
+        margin-left: 3.3em;
+        
+        margin-top: 1em;
+
+        --angle: 1deg;
+        
+        border: 0.2em solid;
+        border-image: conic-gradient(from var(--angle), rgb(252, 252, 252), rgb(236, 8, 8), rgb(255, 255, 255), rgb(0, 0, 0)) 1;
+        
+        animation: 5s rotate linear infinite;
+    }
+
+    #loginButton:hover {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        text-align: center; 
+        font: 1em solid pink;
+        width: 16em;
+        height: 2em;
+        padding: 2%;
+        margin-left: 3.3em;
+        
+        
+        --angle: 0deg;
+        
+        border: 0.4em solid;
+        border-image: conic-gradient(from var(--angle), rgb(252, 252, 252), rgb(236, 8, 8), rgb(255, 255, 255), rgb(0, 0, 0)) 1;
+        
+        animation: 0.4s rotate linear infinite;
+    }
+
+    @keyframes rotate {
+        to {
+            --angle: 360deg;
+        }
+    }
+    
+    @property --angle {
+      syntax: '<angle>';
+      initial-value: 1deg;
+      inherits: false;
+    }
+    
 /*------------------------------------------------------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------------------------------------------------------*/
@@ -152,6 +321,6 @@ input[type=text] {
         margin-left: 5px;
         margin-top: 5px;
         margin-bottom: 5px;
-}
     }
+
 }
