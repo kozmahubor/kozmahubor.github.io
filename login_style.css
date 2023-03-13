@@ -51,23 +51,25 @@ nav a:hover{
     box-shadow: inset 10px 5px 15px 5px #000000;
 }
 
-input[type=text] {
+input[id=search] {
         border-radius: 2em;
         border: 1.5px solid lightseagreen;
-        background: rgb(92,47,0);
-        background: radial-gradient(circle, rgba(92,47,0,0) 22%, rgba(144,91,12,0) 73%, rgba(221,122,0,0) 100%);
+        background: rgb(171,135,81);
+        background: linear-gradient(101deg, rgba(171,135,81,0.5) 15%, rgba(173,95,0,0.5) 25%, rgba(173,95,0,0.5) 50%, rgba(173,95,0,0.5) 75%, rgba(171,135,81,0.5) 85%);
         padding: 0.1em;
         width: 8em;
         height: 1.5em;
-        margin-top: 0.3em;
+        margin-top: 0.22em;
         margin-right: 0.5em;
         text-align: center;
         font-size: 0.8em;
         justify-content: flex-end;
+        -webkit-box-shadow: -7px 7px 1px -2px rgba(0,0,0,0.9); 
+        box-shadow: -7px 7px 1px -2px rgba(0,0,0,0.9);
 }
-input[type=text]:hover {
+input[id=search]:hover {
     border-radius: 2em;
-    border: 1.5px solid lightseagreen;
+    border: 2.5px solid lightseagreen;
     background: rgb(92,47,0);
     background: radial-gradient(circle, rgba(92,47,0,0) 22%, rgba(144,91,12,0) 73%, rgba(221,122,0,0) 100%);
     padding: 0.1em;
@@ -79,7 +81,17 @@ input[type=text]:hover {
     text-align: center;
     font-size: 0.8em;
     justify-content: flex-end;
+
+    position: relative; 
+    top: 0.1em;
+    -webkit-box-shadow: inset 5px 5px 15px 5px #000000; 
+    box-shadow: inset 2px 1px 3px 1px #000000;
 }
+
+    #search::placeholder {
+        color: black;
+        font-size: 1em;
+    }
 
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300&display=swap');
@@ -136,12 +148,13 @@ button {
     .login input[type=text] {
         text-align: center;
         font: 20px solid pink;
+        background: none;
         width: 15em;
         height: 1em;
         padding: 2%;
         margin-left: 1em;
         margin-top: 1em;
-
+        
         --angle: 1deg;
         
         border: 0.2em solid;
@@ -152,7 +165,6 @@ button {
 
     .login input[type=text]:hover {
         text-align: center;
-        color: rgb(1, 214, 214);
         width: 15em;
         height: 1em;
         --angle: 1deg;
@@ -181,7 +193,7 @@ button {
         padding: 2%;
         margin-left: 1em;
         margin-top: 1em;
-
+        
         --angle: 1deg;
         
         border: 0.2em solid;
@@ -192,14 +204,12 @@ button {
 
     .login input[type=password]:hover {
         text-align: center;
-        color: rgb(1, 214, 214);
         width: 15em;
         height: 1em;
-        
         --angle: 1deg;
         
         border: 0.3em solid;
-        border-image: conic-gradient(from var(--angle), rgb(252, 252, 252), rgb(236, 8, 8), rgb(255, 255, 255), rgb(0, 0, 0)) 1 !;
+        border-image: conic-gradient(from var(--angle), rgb(252, 252, 252), rgb(236, 8, 8), rgb(255, 255, 255), rgb(0, 0, 0)) 1;
         
         animation: 1s rotate linear infinite;
     }
