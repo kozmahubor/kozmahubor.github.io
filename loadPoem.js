@@ -1,3 +1,13 @@
+const urlParams = new URLSearchParams(window.location.search);
+const displayParam = urlParams.get('display');
+
+if (displayParam === 'block') {
+  const content = document.getElementById('content');
+  content.style.display = 'block';
+}
+
+
+
 function displayChangeOnClick(id) {
   var wholePoem = document.getElementById(id);
   var intro = document.getElementById(id+"_intro");
@@ -84,3 +94,5 @@ function downloadAllPoems(links) {
     downloadPoem(links[i]).then((fullPoem) => showPoemInHtml(fullPoem));
   }
 }
+
+
