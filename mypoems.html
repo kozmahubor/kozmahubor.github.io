@@ -18,10 +18,10 @@
             <a href="home.html">Home</a>
             <a href="favorite.html">Favorites</a>
             <a href="login.html">Login</a>
-            <input type="text" placeholder="Search...">
+            <input list="suggestions" id="search" type="" placeholder="Search..." onclick="createDatalist()" onkeypress="keyDown()" oninput="showSuggestions()">
         </nav>
     </header>
-    <div id="content" class="style" style="display: none;">
+    <div id="content" class="style" style="display: block;">
         <div>
             <h1>Üdvözlet a szerelmi költészetem birodalmában.</h1>
         </div>

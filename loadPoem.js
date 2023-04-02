@@ -53,7 +53,8 @@ async function downloadPoem(file) {
     .then((response) => response.text())
     .then((text) => text.split(/\r?\n/));
 }
-
+const suggestions = [];
+let counter = 0;
 function showPoemInHtml(file) {
   const element = document.getElementById("content");
 
@@ -64,9 +65,11 @@ function showPoemInHtml(file) {
 
   //title(h2)
   const h2 = document.createElement("h2");
-  h2.id = file[0].replace(" ", "_") + "_intro";
+  h2.id = file[0].toLowerCase().replace(" ", "_") + "_intro";
   h2.innerText = `${file[0]}\n${file[1]}\n${file[2]}\n${file[3]}\n${file[4]}\n`;
   containerDiv.appendChild(h2);
+  suggestions[counter] = h2.id;
+  counter = counter + 1;
 
   //container (div)
   const container = document.createElement("div");
@@ -95,4 +98,75 @@ function downloadAllPoems(links) {
   }
 }
 
+//-----------------search_bar---------------------------------------------------------------------------------
+let text = "";
+
+
+function createDatalist() {
+  var datalist = document.createElement("datalist");
+  datalist.setAttribute("id", "suggestions");
+  for (var k = 0; k < suggestions.length; k++) {
+  var option = document.createElement("option");
+  var currentSuggestionValue = suggestions[k];
+  var newSuggestionValue = currentSuggestionValue.substring(0, currentSuggestionValue.length-6);
+  
+  option.setAttribute("value", newSuggestionValue.replace("_", " "));
+  datalist.appendChild(option);
+  }
+  document.body.appendChild(datalist);
+}
+
+
+function showSuggestions() {
+  var input, filter, options, elementSuggestion;
+  input = document.getElementById("search");
+  filter = input.value.replace("_", " ");
+  elementSuggestion = document.getElementById("suggestions");
+  options = elementSuggestion.getElementsByTagName("option");
+  for (i = 0; i < options.length; i++) {
+    if (options[i].value.indexOf(filter) > -1) {
+      options[i].style.display = "";
+    } else {
+      options[i].style.display = "none";
+    }
+  }
+}
+
+function keyDown() {
+  const searchElement = document.getElementById("search");
+  var input, options, i;
+  if (event.keyCode === 13) {
+    text = searchElement.value;
+    document.getElementById(text.toLowerCase().replace(" ", "_")+"_intro").scrollIntoView()
+  }
+  else {
+    text = searchElement.value;
+
+    input = document.getElementById("search");
+    options = document.getElementById("suggestions").getElementsByTagName("option");
+    for (i = 0; i < options.length; i++) {
+      if (options[i].value.indexOf(text) > -1) {
+        options[i].style.display = "";
+      } else {
+        options[i].style.display = "none";
+      }
+    }
+  }
+}
+
+
+
+function searchPoem1(text) {
+  const titleFromText = text.replace(" ", "_")+"_intro";
+  const allElements = document.querySelector('#content')
+  for (let i = 0; i < allElements.length; i++) {
+    const element = allElements[i];
+    if (element.innerText.match(text)) {
+      element.scrollIntoView();
+      break;
+    }
+    
+  }
+
+}
 

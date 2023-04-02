@@ -66,6 +66,20 @@ input[type=text] {
         font-size: 0.8em;
         justify-content: flex-end;
 }
+#search {
+    border-radius: 2em;
+        border: 1.5px solid lightseagreen;
+        background: rgb(92,47,0);
+        background: radial-gradient(circle, rgba(92,47,0,0) 22%, rgba(144,91,12,0) 73%, rgba(221,122,0,0) 100%);
+        padding: 0.1em;
+        width: 8em;
+        height: 1.5em;
+        margin-top: 0.3em;
+        margin-right: 0.5em;
+        text-align: center;
+        font-size: 0.8em;
+        justify-content: flex-end;
+}
 
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300&display=swap');
