@@ -81,6 +81,10 @@ input[type=text] {
         justify-content: flex-end;
 }
 
+#option {
+    background-color: aqua
+}
+
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300&display=swap');
 h1 {

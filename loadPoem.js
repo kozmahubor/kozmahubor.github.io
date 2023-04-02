@@ -10,7 +10,7 @@ if (displayParam === 'block') {
 
 function displayChangeOnClick(id) {
   var wholePoem = document.getElementById(id);
-  var intro = document.getElementById(id+"_intro");
+  var intro = document.getElementById(id.toLowerCase()+"_intro");
   var button = document.getElementById(id+"_button");
   if (wholePoem.style.display == "block") {
     wholePoem.style.display = "none";
@@ -65,8 +65,9 @@ function showPoemInHtml(file) {
 
   //title(h2)
   const h2 = document.createElement("h2");
-  h2.id = file[0].toLowerCase().replace(" ", "_") + "_intro";
-  h2.innerText = `${file[0]}\n${file[1]}\n${file[2]}\n${file[3]}\n${file[4]}\n`;
+  var id = file[0].replace(/\t/g, '')
+  h2.id = id.toLowerCase().replace(" ", "_") + "_intro";
+  h2.innerText = `${file[0]}\n${file[1]}\n${file[2]}\n${file[3]}\n${file[4]}\n${file[5]}\n`;
   containerDiv.appendChild(h2);
   suggestions[counter] = h2.id;
   counter = counter + 1;
@@ -85,6 +86,7 @@ function showPoemInHtml(file) {
   });
   //button
   const button = document.createElement("button");
+  button.type = 'button'
   button.id = file[0].replace(" ", "_") + "_button";
   button.innerText = "Show more..."
   button.addEventListener("click", () => displayChangeOnClick(container.id))
@@ -109,7 +111,7 @@ function createDatalist() {
   var option = document.createElement("option");
   var currentSuggestionValue = suggestions[k];
   var newSuggestionValue = currentSuggestionValue.substring(0, currentSuggestionValue.length-6);
-  
+  option.id = "option"
   option.setAttribute("value", newSuggestionValue.replace("_", " "));
   datalist.appendChild(option);
   }
