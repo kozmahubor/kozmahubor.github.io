@@ -26,7 +26,7 @@ function displayChangeOnClick(id) {
 document.addEventListener("DOMContentLoaded", () => downloadAllPoems(links));
 
 const links = [
-  "https://raw.githubusercontent.com/kozmahubor/kozmahubor.github.io/main/poems/renivers_calodast_okoztam.txt",
+  "https://raw.githubusercontent.com/kozmahubor/kozmahubor.github.io/main/poems/renivers_csalodast_okoztam.txt",
   "https://raw.githubusercontent.com/kozmahubor/kozmahubor.github.io/main/poems/renivers_365_nap.txt",
   "https://raw.githubusercontent.com/kozmahubor/kozmahubor.github.io/main/poems/renivers_alom.txt",
   "https://raw.githubusercontent.com/kozmahubor/kozmahubor.github.io/main/poems/renivers_a_te_napod.txt",
@@ -65,7 +65,10 @@ function showPoemInHtml(file) {
 
   //title(h2)
   const h2 = document.createElement("h2");
-  var id = file[0].replace(/\t/g, '')
+  var id = file[0].replace(/\s*\t\s*|\n/g, '');
+  if (id.length <= 0) {
+    id = file[1].replace(/\s*\t\s*|\n/g, '');
+  }
   h2.id = id.toLowerCase().replace(" ", "_") + "_intro";
   h2.innerText = `${file[0]}\n${file[1]}\n${file[2]}\n${file[3]}\n${file[4]}\n${file[5]}\n`;
   containerDiv.appendChild(h2);
