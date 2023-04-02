@@ -1,9 +1,12 @@
+
 body {
     margin: auto;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Orlai-petofi1.jpg/220px-Orlai-petofi1.jpg);
+    background-image: url("happyTogether2.jpg");
+    background-size: cover;
     background-repeat: repeat;
+    background-position: bottom;
     width: 100%;
-    background-size: 100%;
+    background-size: 110%;
 }
 
 header {
@@ -66,146 +69,12 @@ input[type=text] {
         font-size: 0.8em;
         justify-content: flex-end;
 }
-#search {
-    border-radius: 2em;
-        border: 1.5px solid lightseagreen;
-        background: rgb(92,47,0);
-        background: radial-gradient(circle, rgba(92,47,0,0) 22%, rgba(144,91,12,0) 73%, rgba(221,122,0,0) 100%);
-        padding: 0.1em;
-        width: 8em;
-        height: 1.5em;
-        margin-top: 0.3em;
-        margin-right: 0.5em;
-        text-align: center;
-        font-size: 0.8em;
-        justify-content: flex-end;
-}
-
-#option {
-    background-color: aqua
-}
 
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300&display=swap');
 h1 {
     text-align: center;
     font-size: 20px;
-    color: rgb(255, 93, 93);
-}
-
-h2 {
-    margin-top: 1em;
-    font-size: 16px;
-}
-
-    p {
-        font-family: 'Dancing Script', cursive;
-        font-size: 12px;
-        text-align: left;
-        background: linear-gradient(101deg, rgba(249,208,73,0.75) 15%, rgba(187,152,45,0.5) 50%, rgba(173,95,0,0.75) 85%);
-    }
-    #newPoem {
-        font-size: 10px;
-        background: none;
-        text-align: right;
-        color: red;
-    }
-
-    #newPoem:hover {
-        top: 5px;
-        -webkit-box-shadow: inset 5px 5px 15px 5px #000000; 
-        box-shadow: inset 10px 5px 15px 5px #000000;
-    }
-
-h3 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 10px;
-    margin-right: 180px;
-}
-
-
-button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    padding: 12px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
-    margin-bottom: 24px;
-    cursor: pointer;
-  }
-
-/*------------------------------------------------------------------------------------------------------------------------*/
-
-/*------------------------------------------------------------------------------------------------------------------------*/
-
-/*------------------------------------------------------------------------------------------------------------------------*/
-
-/*------------------------------------------------------------------------------------------------------------------------*/
-
-@media only screen and (width: 360) {
-    body {
-    margin: auto;
-    width: 100%;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Orlai-petofi1.jpg/220px-Orlai-petofi1.jpg);
-}
-
-header {
-    margin-top: 0px;
-    width: 100%;
-    background: rgb(92,47,0);
-    background: radial-gradient(circle, rgba(92,47,0,1) 22%, rgba(144,91,12,1) 73%, rgba(221,122,0,1) 100%);
-    
-}
-
-nav {
-    display: flex;
-}
-
-nav a {
-    text-decoration: none;
-    padding-top: 0px;
-    padding-left: 5px;
-    padding-right: 5px;
-    color: black;
-    font-size: 1.2em;
-    background: rgb(171,135,81);
-    background: linear-gradient(101deg, rgba(171,135,81,1) 15%, rgba(173,95,0,1) 25%, rgba(173,95,0,1) 50%, rgba(173,95,0,1) 75%, rgba(171,135,81,1) 85%);
-    border-radius: 20px;
-    border: 2px solid black;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 0.5em;
-    
-}
-
-nav a:hover{
-    position: relative;
-    top: 5px;
-    -webkit-box-shadow: inset 5px 5px 15px 5px #000000; 
-    box-shadow: inset 5px 5px 15px 5px #000000;
-}
-
-input[type=text] {
-        border-radius: 10px;
-        font-style: oblique;
-        border: 2px solid rgb(0, 0, 0);
-        background: rgb(92,47,0);
-        background: radial-gradient(circle, rgba(92,47,0,0) 22%, rgba(144,91,12,0) 73%, rgba(221,122,0,0) 100%);
-        padding-right: 100px;
-        width: 5%;
-        text-align: center;
-        justify-content: flex-end;
-        margin-left: 5px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 1em;
     color: rgb(255, 93, 93);
 }
 
@@ -232,4 +101,81 @@ button {
     margin-bottom: 24px;
     cursor: pointer;
   }
+
+  #content {
+    display: none;
+    margin-top: 24px;
+  }
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+@media only screen and (width: 360) {
+    body {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("happyTogether2.jpg");
+}
+
+
+
+    
+header {
+    margin-top: 0px;
+    background: rgb(92,47,0);
+    background: radial-gradient(circle, rgba(92,47,0,1) 22%, rgba(144,91,12,1) 73%, rgba(221,122,0,1) 100%);
+    
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    padding-top: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: black;
+    font-size: 25px;
+    background: rgb(171,135,81);
+    background: linear-gradient(101deg, rgba(171,135,81,1) 15%, rgba(173,95,0,1) 25%, rgba(173,95,0,1) 50%, rgba(173,95,0,1) 75%, rgba(171,135,81,1) 85%);
+    border-radius: 20px;
+    border: 2px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    
+}
+
+nav a:hover{
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: inset 5px 5px 15px 5px #000000; 
+    box-shadow: inset 5px 5px 15px 5px #000000;
+}
+
+input[type=text] {
+        border-radius: 10px;
+        font-style: oblique;
+        border: 2px solid rgb(0, 0, 0);
+        background: rgb(92,47,0);
+        background: radial-gradient(circle, rgba(92,47,0,0) 22%, rgba(144,91,12,0) 73%, rgba(221,122,0,0) 100%);
+        padding-right: 100px;
+        width: 60px;
+        text-align: center;
+        justify-content: flex-end;
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+}
 }
