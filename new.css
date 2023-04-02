@@ -2,11 +2,9 @@
 body {
     margin: auto;
     background-image: url("happyTogether2.jpg");
-    background-size: cover;
     background-repeat: repeat;
-    background-position: bottom;
     width: 100%;
-    background-size: 110%;
+    background-size: 120%;
 }
 
 header {
@@ -72,6 +70,7 @@ input[type=text] {
 
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 h1 {
     text-align: center;
     font-size: 20px;
@@ -80,26 +79,38 @@ h1 {
 
 h2 {
     font-family: 'Dancing Script', cursive;
-    font-size: 12px;
-}
+    background: rgb(0,0,0);
+    background: linear-gradient(138deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 30%, rgba(255,255,255,0.3) 50%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 70%, rgba(255,255,255,0.8) 100%);
+    color: wheat;}
 
 h3 {
     font-family: 'Dancing Script', cursive;
     font-size: 10px;
     margin-right: 180px;
+}   
+
+p {
+    font-family: 'Dancing Script', cursive;
+    color: wheat;
+    font-style: italic;
+    background: rgb(0,0,0);
+    background: linear-gradient(138deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 30%, rgba(255,255,255,0.3) 50%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 70%, rgba(255,255,255,0.8) 100%);
 }
 
 button {
-    background-color: transparent;
+    background: rgb(0,0,0);
+    background: linear-gradient(138deg, rgba(0,0,0,0.8) 30%, rgba(255,255,255,0.8) 70%);
     border: none;
-    color: white;
+    color: wheat;
     padding: 12px 24px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 10px;
+    font-size: 15px;
     margin-bottom: 24px;
     cursor: pointer;
+    margin: 0em 7.2em;
+
   }
 
   #content {

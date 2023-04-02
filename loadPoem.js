@@ -46,6 +46,7 @@ const links = [
   "https://raw.githubusercontent.com/kozmahubor/kozmahubor.github.io/main/poems/renivers_tizedik_honap.txt",
   "https://raw.githubusercontent.com/kozmahubor/kozmahubor.github.io/main/poems/renivers_varok_rad.txt",
   "https://raw.githubusercontent.com/kozmahubor/kozmahubor.github.io/main/poems/reniverss_ez_meg_nem_a_veg.txt",
+  "https://raw.githubusercontent.com/kozmahubor/kozmahubor.github.io/main/poems/renivers_szerelmes_gondolatok.txt",
 ];
 1
 async function downloadPoem(file) {
