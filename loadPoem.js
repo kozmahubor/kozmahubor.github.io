@@ -95,10 +95,26 @@ function showPoemInHtml(file) {
 }
 
 function downloadAllPoems(links) {
+
+
+
+  let isLoggedIn = 
+  document.cookie?.split('; ')
+    .find(row => row.startsWith('loggedIn='))
+    ?.split('=')[1];
+  
+  if (isLoggedIn === 'false' || isLoggedIn === undefined ) {
+    return;
+  }
   for (let i = 0; i < links.length; i++) {
     console.log(links[i]);
     downloadPoem(links[i]).then((fullPoem) => showPoemInHtml(fullPoem));
   }
+
+  let doc = document.getElementById("content")
+        doc.style.display = "block"
+  
+  
 }
 
 //-----------------search_bar---------------------------------------------------------------------------------
