@@ -1,6 +1,11 @@
 body {
+    overflow-x: hidden;
+    max-width: 100%;
     font-family: Arial, sans-serif;
     margin: 0;
+    background-color:  rgba(255, 255, 255, 0.5);;
+    overflow: hidden !important;
+
   }
   
   header {
@@ -10,13 +15,29 @@ body {
     padding: 20px;
   }
   
-  h1 {
+  h2 {
     margin: 0;
+    font-size: 20px;
+    color: red;
+  }
+
+  .thumbnails-container {
+    overflow-x: hidden;
+    background-color: #000000;
   }
   
   .thumbnails {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30px, 50px));
+    white-space: nowrap !important;
+
+    top: 100;
+    left: 100;
+    z-index: 21;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+
+    display: inline-block;
+    overflow-x: scroll;
+    white-space: nowrap;
     gap: 10px;
     padding: 15px;
   }
@@ -24,13 +45,109 @@ body {
   .thumbnails img {
     filter: grayscale(100%);
     margin-top: 20em;
-    width: 5em;
-    height: 17em;
+    margin-bottom: 30em;
+    width: 10em;
+    height: 30em;
     border: 2px solid #fff;
     transition: all 0.3s ease;
     cursor: pointer;
   }
   
+  .image {
+    scroll-snap-align: center;
+    transition: transform 0.5s;
+  }
+  
+
+  .image.left5 {
+
+    transform: skew(+20deg, 0) scale(1.2);
+    filter: none;
+    transition: transform 0.5s;
+
+
+  }
+
+  .image.left4 {
+
+    transform: skew(+15deg, 0) scale(1.2);
+    filter: none;
+    transition: transform 0.4s;
+
+
+  }
+
+  .image.left3 {
+
+    transform: skew(+10deg, 0) scale(1.2);
+    filter: none;
+    transition: transform 0.3s;
+
+
+  }
+
+  .image.left2 {
+
+    transform: scaleX(-1) scale(1.2);
+    filter: none;
+    transition: transform 0.2s;
+
+
+  }
+
+  .image.left1 {
+    transform: scaleX(-1) scale(1.2);
+    filter: none;
+    transition: transform 0.1s;
+
+
+  }
+
+  .image.middle {
+    transform: scale(1.2);
+    filter: none;
+  }
+
+  .image.right1 {
+
+    transform: scaleX(-1) scale(1.2);
+    filter: none;
+    transition: transform 0.1s;
+
+  }
+
+  .image.right2 {
+
+    transform: scaleX(-1) scale(1.2);
+    filter: none;
+    transition: transform 0.2s;
+
+
+  }
+
+  .image.right3 {
+
+    transform: skew(-10deg, 0) scale(1.2);
+    filter: none;
+    transition: transform 0.3s;
+
+  }
+
+  .image.right4 {
+    transform: skew(-15deg, 0) scale(1.2);
+    filter: none;
+    transition: transform 0.4s;
+
+  }
+
+  .image.right5 {
+    transform: skew(-20deg, 0) scale(1.2);
+    filter: none;
+    transition: transform 0.5s;
+
+  }
+
+
   .thumbnails img:hover {
     filter: none;
     transform: scale(1.1);
@@ -53,15 +170,17 @@ body {
     transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
-    background-color: #fff;
-    border: 2px solid #000;
+    background-color: transparent;
+    border: 2px solid #ffffff;
     padding: 20px;
     overflow: auto;
+    
   }
   
   #overlay-content img {
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
+    
   }
   
