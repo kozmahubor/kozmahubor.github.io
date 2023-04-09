@@ -3,7 +3,7 @@ body {
     max-width: 100%;
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color:  rgba(255, 255, 255, 0.5);;
+    background-color:  rgb(255, 255, 255);;
     overflow: hidden !important;
 
   }
@@ -32,7 +32,7 @@ body {
     top: 100;
     left: 100;
     z-index: 21;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     opacity: 1;
 
     display: inline-block;
@@ -48,7 +48,7 @@ body {
     margin-bottom: 30em;
     width: 10em;
     height: 30em;
-    border: 2px solid #fff;
+    border: 0px solid #fff;
     transition: all 0.3s ease;
     cursor: pointer;
   }
